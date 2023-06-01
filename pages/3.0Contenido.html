@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtHeart</title> <!-- Título (pestaña del navegador) -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="gridPadre3">
+    <header class="titulo">
+        <nav class="barranav"><!-- Todo lo que es navegación del usuario -->
+            <ul>
+                <h1 class="header">Contenido</h1>
+                <li><a href="../index.html">Volver al inicio</a></li>
+                <li><a href="2Registro.html">Registrarse</a></li>
+                <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
+                <li><a href="4Tutoriales.html">Tutoriales</a></li>
+                <li><a href="5Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="gridHijo3">
+        <section for="filtro" class="filtro">
+            <p>pepito clavo un clavito</p>
+            <label>
+                <select name="filtro" id="filtro">
+                    <option value="filtros">filtro1</option>
+                    <option value="filtros">filtro2</option>
+                    <option value="filtros">filtro3</option>
+                    <option value="filtros">filtro4</option>
+                    <option value="filtros">filtro5</option>
+                </select>
+            </label>
+        </section>
+<!-- Selector de contenido -->
+    <section class="selector">
+        <article>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat1.jpg" alt="cat1"></a>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat2.jpg" alt="cat2"></a>
+        </article>
+        <article>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat3.jpg" alt="cat3"></a>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog1.jpg" alt="dog1"></a>
+        </article>
+        <article><!-- ( style="width: 300px; height: 200px; object-fit: cover;") cropea la imagen -->
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog2.jpg" alt="dog2"></a>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog3.jpg" alt="dog3"></a>
+        </article>
+        <article>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat4.jpg" alt="cat3"></a>
+            <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog4.jpg" alt="dog1"></a>
+        </article>
+    </section>
+    <section class="check">
+        <label for="buscador"><input type="search" name="buscador" id="buscador" placeholder="Buscar por nombre"></label>
+        <article>
+            <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1">Filtro 01</label>
+            <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1">Filtro 02</label>
+            <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1">Filtro 03</label>
+        </article>
+        <article>
+            <label for="filtros2"><input type="radio" name="filtros2" id="filtros2">Filtro 04</label>
+            <label for="filtros2"><input type="radio" name="filtros2" id="filtros2">Filtro 05</label>
+            <label for="filtros2"><input type="radio" name="filtros2" id="filtros2">Filtro 06</label>
+        </article>
+        <article>
+            <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3">Filtro 07</label>
+            <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3">Filtro 08</label>
+            <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3">Filtro 09</label>
+        </article>
+    </section>
+    </main>
+    <footer class="pie">
+        <div class="sticky">
+            <a href="#arriba"><img src="../images/icons/Facebook.png" alt="placeH"></a>
+        </div>
+        <p>Copyright©</p>
+    </footer>   <!-- copyright, bibliografía, contacto --> 
+</body>
+</html>

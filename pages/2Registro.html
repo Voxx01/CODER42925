@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtHeart</title> <!-- Título (pestaña del navegador) -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="gridPadre2">
+    <header class="titulo">
+        <nav class="barranav"><!-- Todo lo que es navegación del usuario -->
+            <ul>
+                <h1 class="header">Registro</h1>
+                <li><a href="../index.html">Volver al inicio</a></li>
+                <li><a href="3.0Contenido.html">Contenido</a></li>
+                <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
+                <li><a href="4Tutoriales.html">Tutoriales</a></li>
+                <li><a href="5Contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="gridHijo2">
+        <!-- Registro -->
+        <form action="" class="registrarse">
+                <h2>Registrarse:</h2>
+                <label for="pais">País
+                <select name="Pais" id="Pais" required>
+                    <option value="Elegir">Elegir país</option>
+                    <option value="AR">Argentina</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BR">Brazil</option>
+                    <option value="COL">Colombia</option>
+                    <option value="COS">Costa rica</option>
+                    <option value="CU">Cuba</option>
+                    <option value="Ch">Chile</option>
+                    <option value="Ec">Ecuador</option>
+                    <option value="ES">El Salvador</option>
+                    <option value="GU">Guatemala</option>
+                    <option value="HO">Honduras</option>
+                    <option value="MX">Mexico</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="PA">Panamá</option>
+                    <option value="PAR">Paraguay</option>
+                    <option value="PE">Perú</option>
+                    <option value="RD">República Dominicana</option>
+                    <option value="UR">Uruguay</option>
+                    <option value="VN">Venezuela</option>
+                </select>
+                </label>
+                <label for="nombre">Nombre y Apellido <input type="text" name="nombre" id="nombre" required minlength="2" placeholder="Nombre y Apellido">
+                </label>
+                <label for="cumpleaños">Cumpleaños <input type="date" name="cumpleaños" id="cumpleaños" required></label>
+                <label for="usuario">Usuario <input type="text" name="usuario" id="usuario" required placeholder="Usuario"></label>
+                <label for="contraseña">Contraseña <input type="password" name="contraseña" id="contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Contraseña" ></label>
+                <label for="confirmar">Confirmar contraseña <input type="password" name="confirmar" id="confirmar" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Confirmar contraseña"></label>
+                <label for="email">Email <input type="email" name="email" id="email" required placeholder="pepito@ejemplo.com"></label>
+                <label for="terminos"><input type="checkbox" name="terminos" id="terminos" required>Terminos y condiciones</label>
+            <input type="submit" value="Enviar" class="Botom">
+        </form>
+        <form action="" class="logos">
+                    <h2>Registrarse con:</h2>
+                    <a href="https://www.instagram.com/accounts/login/" target="_blank"><img src="../images/icons/Insta.png" alt="insta"></a>
+                    <a href="https://accounts.google.com/InteractiveLogin/identifier?elo=1&ifkv=Af_xneF0P__oJXE2L7c9SmSdWko-RU1BU4pRaw1761fbdTRfd0JHizL6RWg50bAqv59488SFDEbZDQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" ><img src="../images/icons/google.png" alt="google"></a>
+                    <a href="https://appleid.apple.com" target="_blank"><img src="../images/icons/apple.png" alt="apple"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="../images/icons/Facebook.png" alt="facebook"></a>
+        </form>
+        <form action="" class="Is">
+                <div class="Iniciarsesión">
+                    <h2>Iniciar sesión:</h2>
+                    <label for="usuarioI">Usuario:
+                        <input type="text" name="usuarioI" id="usuarioI" placeholder="Usuario">
+                    </label>
+                    <p><a href="">¿Olvidó su usuario?</a></p>
+                    <label for="contraseñaI">Contraseña:
+                        <input type="password" name="contraseñaI" id="contraseñaI" placeholder="Contraseña">
+                    </label>
+                </div>
+                <label for=""><input type="submit" value="Ingresar"  class="Botom"></label>
+                <div>
+                <a href="">Preguntas frecuentes</a>
+                <a href="5Contacto.html">Contáctanos</a>
+                </div>
+        </form> 
+    </main>
+    <footer class="pie">
+        <div class="sticky">
+            <a href="#arriba"><img src="../images/icons/Facebook.png" alt="placeH"></a>
+        </div>
+        <p>Copyright©</p>
+    </footer>   <!-- copyright, bibliografía, contacto --> 
+</body>
+</html>
