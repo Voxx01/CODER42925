@@ -47,33 +47,34 @@ footer {
 /* Barra de navegación */
 .header {
     background-color:#7b2cbf;
-    display: inline-block;
     text-align: center;
     padding: 5px;
     border-radius: 10px;
 }
 .barranav {
     grid-area: titulo;
-    height: 100px;
-    width: auto;
-    margin: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: baseline;
     background-color: #3c096c;
-    overflow: hidden;
     border: #cafdff outset 5px;
 }
 .barranav ul {
-    margin-left: 50px;
+    display: flex;
+    list-style-type: none;
     height: 100px;
 }
 .barranav li {
-    display: inline-block;
-    padding: 35px 20px;
-    margin: 10px 20px;
+    height: 40px;
 }
 .barranav a:hover {
     background-color: #7b2cbf;
 }
 .barranav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: aliceblue;
     border: #cafdff inset;
     padding: 10px;
@@ -227,12 +228,9 @@ footer {
 }
 .registrarse {
     grid-area: registro;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: center;
     background-color: mediumslateblue;
     width: 80%;
+    max-width: 520px;
 }
 .registrarse label {
     display: flex;
@@ -244,6 +242,8 @@ footer {
     grid-area: regisCon;
     background-color: rgb(117, 3, 24);
     width: 80%;
+    height: 20%;
+    max-width: 350px;
 }
 .logos h2,.registrarse h2,.Iniciarsesión h2 {
     text-align: center;
@@ -252,11 +252,14 @@ footer {
 }
 .logos img {
     background-color: aliceblue;
+    object-fit: cover;
     width: 40px;
     height: 40px;
-    margin-left: 26px;
-    margin-top: 10px;
-    border-radius: 40%;
+}
+.logosimg {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 .Is {
     grid-area: iniciarS;
@@ -451,6 +454,10 @@ footer {
 }
 /* Media-queries */
 @media screen and (max-width: 500px) {
+    /* barraNav */
+    .barranav li {
+        display: none;
+    }
     /* Index */
     .gridHijo1 {
         grid-area: medio1;
@@ -469,5 +476,15 @@ footer {
     .galeria img {
     width: 150px;
     height: 100px;    
+    }
+    /* 2Registro */
+    .gridHijo2 {
+        grid-area: medio2;
+        grid-template-columns:1fr;
+        grid-row: repeat (3, 1fr);
+        grid-template-areas:
+        "registro"
+        "regisCon"
+        "iniciarS";
     }
 }
