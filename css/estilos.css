@@ -296,16 +296,18 @@ footer {
 /* 3.0Contenido */
 .gridPadre3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 120px 1fr 80px;
     grid-template-areas:
-    "titulo titulo titulo"
-    "medio3 medio3 medio3"
-    "pie pie pie";
+    "titulo"
+    "medio3"
+    "pie";
 }
 .gridHijo3 {
     display: grid;
     grid-area: medio3;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 100px 3fr 3fr;
     grid-template-areas:
     "filtro filtro check"
     "selector selector check"
@@ -316,15 +318,92 @@ footer {
     background-color: rgb(117, 3, 24);
 }
 .selector {
+    display: flex;
     grid-area: selector;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
     background-color: #ffbb00;
+    height: 600px;
     overflow-y: scroll;
+}
+.selector img {
+    display: flex;
+    object-fit: cover;
+    width: 475px;
+    height: 300px;
+}
+.selectorsep {
+    padding: 5px 0;
+}
+.selectortxt {
+    background-color: #cafdff;
+    height: 20px;
+    width: 475px;
+    overflow: hidden;
+}
+.selectortxt:hover {
+    position: relative;
+    bottom: 25px;
+    background-color: #00f7ff;
+    height: 80px;
     overflow: auto;
 }
 .check {
+    display: grid;
     grid-area: check;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-column: 1fr;
     background-color: #3c096c;
     overflow: auto;
+}
+.checkbus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeff00;
+}
+.checkbus input {
+    border: #001427 solid;
+}
+.checkf1 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background-color: #ff0d00;
+    border: #cafdff outset;
+}
+.checkf1 label {
+    padding-left: 20px;
+    border: goldenrod inset;
+    padding: 5px;
+    background-color: #8d0700;
+}
+.checkf2 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background-color: #33ff00;
+    border: #cafdff outset;
+}
+.checkf2 label {
+    padding-left: 20px;
+    border: goldenrod inset;
+    padding: 5px;
+    background-color: #1c8b00;
+}
+.checkf3 {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background-color: #5900ff;
+    border: #cafdff outset;
+}
+.checkf3 label {
+    padding-left: 20px;
+    border: goldenrod inset;
+    padding: 5px;
+    background-color: #32008f;
 }
 /* Contenido 3.1 */
 .gridPadre31 {
@@ -486,5 +565,23 @@ footer {
         "registro"
         "regisCon"
         "iniciarS";
+    }
+    /* 3.0Contenido */
+    .gridHijo3 {
+        display: grid;
+        grid-area: medio3;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas:
+        "selector"
+        "filtro"
+        "check";
+    }
+    .selector {
+        overflow: hidden;
+    }
+    .selector img {
+        width: 50px;
+        height: 10px;
     }
 }
