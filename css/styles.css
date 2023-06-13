@@ -902,7 +902,7 @@ footer {
     /* 3.1ContenidoI */
     .gridHijo31 {
         grid-area: medio31;
-        grid-template-columns: 425px;
+        grid-template-columns: 420px;
         grid-template-rows: 400px 1fr 200px; 
         grid-template-areas:
         "preview" 
