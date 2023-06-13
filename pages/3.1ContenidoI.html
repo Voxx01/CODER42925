@@ -8,40 +8,58 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilos copy.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="gridPadre31">
-    <header class="titulo">
-        <nav class="barranav"><!-- Todo lo que es navegación del usuario -->
-            <ul>
-                <h1 class="header">ContenidoI</h1>
+    <header id="arriba" class="titulo">
+        <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
+            <h1 class="header">ContenidoI</h1>
+            <ul class="barranavitems">
                 <li><a href="../index.html">Volver al inicio</a></li>
                 <li><a href="2Registro.html">Registrarse</a></li>
                 <li><a href="3.0Contenido.html">Contenido</a></li>
                 <li><a href="4Tutoriales.html">Tutoriales</a></li>
                 <li><a href="5Contacto.html">Contacto</a></li>
             </ul>
+            <select name="menuBur" id="menuBur" class="menuBur">
+                <!-- NO FUNCIONA CAMBIAR -->
+                <option value="Elegir">Elegir</option>
+                <option value="2Registro"><a href="pages/2Registro.html">Registro</a></option>
+                <option value="3.0Contenido"><a href="pages/3.0Contenido.html">Contenido</a></option>
+                <option value="3.1ContenidoI"><a href="pages/3.1ContenidoI.html">ContenidoI</a></option>
+                <option value="4Tutoriales"><a href="pages/4Tutoriales.html">Tutoriales</a></option>
+                <option value="5Contacto"><a href="pages/5Contacto.html">Contacto</a></option>
+            </select>
         </nav>
     </header>
     <main class="gridHijo31">
         <section class="preview">
-            <img src="../images/placeholder/dog5.jpg" alt="dog5">
-            <img src="../images/placeholder/dog6.jpg" alt="dog6">
+            <article class="previewimg">
+                <img src="../images/placeholder/dog5.jpg" alt="dog5">
+                <img src="../images/placeholder/dog6.jpg" alt="dog6">
+            </article>
+            <article class="previewlink">
+                <a href="3.1ContenidoI.html">Filtro01</a>
+                <a href="3.1ContenidoI.html">Filtro02</a>
+                <a href="3.1ContenidoI.html">Filtro03</a>
+                <a href="3.1ContenidoI.html">Filtro04</a>
+                <a href="3.1ContenidoI.html">Filtro05</a>
+            </article>
         </section>
-        <article class="botono">
-            <button type="button">Filtro1</button>
-            <button type="button">Filtro2</button>
-            <button type="button">Filtro3</button>
-            <button type="button">Filtro4</button>
-        </article>
         <section class="datos">
-            <h3>Titulo</h3>
-            <h4>Autor</h4>
-            <img src="../images/icons/vistas.svg" alt="vistas">
-            <input type="radio" name="likedislike" id="likedislike"><img src="../images/icons/laik.svg" alt="laiks">
-            <input type="radio" name="likedislike" id="likedislike"><img src="../images/icons/dislike.svg" alt="dislikes">
+            <article>
+                <h3>Titulo</h3>
+                <h4>Autor</h4>
+            </article>
+            <article class="datosicons">
+                <img src="../images/icons/vistas.svg" alt="vistas">
+                <input type="radio" name="likedislike" id="likedislike"><img src="../images/icons/laik.svg" alt="laiks">
+                <input type="radio" name="likedislike" id="likedislike"><img src="../images/icons/dislike.svg" alt="dislikes">
             <img src="../images/icons/descarga.svg" alt="descargas">
-            <p>(Description) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque velit porro quisquam, esse optio voluptatum rerum. In ratione perferendis atque quasi expedita est repellat doloremque optio dignissimos eligendi sequi nisi sapiente, minus commodi reiciendis quibusdam voluptates ducimus sed labore! Vero, illo explicabo. Asperiores quis voluptas ratione commodi officiis, sit libero incidunt deleniti dolore saepe, dolorum aut ipsa totam natus alias quam consectetur eligendi! Rerum nulla et deleniti voluptates aspernatur esse at dolore incidunt nemo iusto recusandae blanditiis aliquid accusantium tempore laboriosam tempora, dignissimos soluta voluptatibus debitis dolorem atque cupiditate amet eius quia! Aperiam officiis pariatur animi vitae suscipit expedita? Aliquid?</p>
+            </article>
+            <article class="datostxt">
+                <p>(Description) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque velit porro quisquam, esse optio voluptatum rerum. In ratione perferendis atque quasi expedita est repellat doloremque optio dignissimos eligendi sequi nisi sapiente, minus commodi reiciendis quibusdam voluptates ducimus sed labore! Vero, illo explicabo. Asperiores quis voluptas ratione commodi officiis, sit libero incidunt deleniti dolore saepe, dolorum aut ipsa totam natus alias quam consectetur eligendi! Rerum nulla et deleniti voluptates aspernatur esse at dolore incidunt nemo iusto recusandae blanditiis aliquid accusantium tempore laboriosam tempora, dignissimos soluta voluptatibus debitis dolorem atque cupiditate amet eius quia! Aperiam officiis pariatur animi vitae suscipit expedita? Aliquid?</p>
+            </article>
         </section>
         <section class="mas">
             <img src="../images/placeholder/cat8.jpg" alt="cato1">
@@ -56,9 +74,9 @@
     </main>
     <footer class="pie">
         <div class="sticky">
-            <a href="#arriba"><img src="../images/icons/Facebook.png" alt="placeH"></a>
+            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
         </div>
         <p>Copyright©</p>
-    </footer>   <!-- copyright, bibliografía, contacto --> 
+    </footer>
 </body>
 </html>

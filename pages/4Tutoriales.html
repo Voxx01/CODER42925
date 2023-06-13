@@ -8,19 +8,28 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilos copy.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="gridPadre4">
-    <header class="titulo">
-        <nav class="barranav"><!-- Todo lo que es navegación del usuario -->
+    <header id="arriba" class="titulo">
+        <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
+            <h1 class="header">Tutoriales</h1>
             <ul>
-                <h1 class="header">Tutoriales</h1>
                 <li><a href="../index.html">Volver al inicio</a></li>
                 <li><a href="2Registro.html">Registrarse</a></li>
                 <li><a href="3.0Contenido.html">Contenido</a></li>
                 <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
                 <li><a href="5Contacto.html">Contacto</a></li>
             </ul>
+            <select name="menuBur" id="menuBur" class="menuBur">
+                <!-- NO FUNCIONA CAMBIAR -->
+                <option value="Elegir">Elegir</option>
+                <option value="2Registro"><a href="pages/2Registro.html">Registro</a></option>
+                <option value="3.0Contenido"><a href="pages/3.0Contenido.html">Contenido</a></option>
+                <option value="3.1ContenidoI"><a href="pages/3.1ContenidoI.html">ContenidoI</a></option>
+                <option value="4Tutoriales"><a href="pages/4Tutoriales.html">Tutoriales</a></option>
+                <option value="5Contacto"><a href="pages/5Contacto.html">Contacto</a></option>
+            </select>
         </nav>
     </header>
     <main class="gridHijo4">
@@ -53,9 +62,9 @@
     </main>
     <footer class="pie">
         <div class="sticky">
-            <a href="#arriba"><img src="../images/icons/Facebook.png" alt="placeH"></a>
+            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
         </div>
         <p>Copyright©</p>
-    </footer>   <!-- copyright, bibliografía, contacto --> 
+    </footer>
 </body>
 </html>

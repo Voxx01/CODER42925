@@ -13,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <!-- CSS Bootstrap <link rel="stylesheet" href=""> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
     <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos copy.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="gridPadre1">  <!-- contenido de pág -->
-    <header id="arriba">
-        <nav class="barranav">
-            <h1 class="header">ArtHeart</h1>  <!-- Todo lo que es navegación del usuario -->
+    <header id="arriba" class="titulo">
+        <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
+            <h1 class="header">ArtHeart</h1>  
             <ul class="barranavitems">
                 <li><a href="pages/2Registro.html">Registro</a></li>
                 <li><a href="pages/3.0Contenido.html">Contenido</a></li>
@@ -40,17 +40,49 @@
         </nav>
     </header> <!-- encabezado -->
     <main class="gridHijo1"> <!-- Principal -->
-        <section class="slide">
-            <a href="https://www.artstation.com/artwork/lR8G1G" target="_blank"><img src="images/placeholder/sean-budanio-1.jpg" alt="featuredArt"></a>
-        </section>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="https://www.artstation.com/artwork/lR8G1G" target="_blank"><img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean"></a>
+            </div>
+            <div class="carousel-item">
+                <img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean">
+            </div>
+            <div class="carousel-item">
+                <img src="images/placeholder/darktide.jpg" class="d-block w-100" alt="darktide">
+            </div>
+            <div class="carousel-item">
+                <img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean">
+            </div>
+            <div class="carousel-item">
+                <img src="images/placeholder/darktide.jpg" class="d-block w-100" alt="darktide">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
         <section class="scroll">
             <h4>News</h4>
-            <a href="https://www.deviantart.com/d4rkawaii/art/Special-Brush-Pack-Happy-Halloween-857242107"><img src="images/placeholder/special_brush_pack__happy_halloween__by_d4rkawaii_de6do8r-pre.jpg" alt="brushes"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
-            <a href="https://insider.in/art-contest-online-apr11-2020-digital-online-event/event"><img src="images/placeholder/xqmhdi2oebfbwef6hhgl.webp" alt="concurso"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
-            <a href="index.html"><img src="images/placeholder/bombones.jpg" alt="bombones"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
-            <a href="index.html"><img src="images/placeholder/Rock.jpg" alt="roca"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
-            <a href="index.html"><img src="images/placeholder/book.jpg" alt="libro"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
-            <a href="index.html"><img src="images/placeholder/cookie.jpg" alt="galleta"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a>
+            <div class="scrollseptab" class="scrollsep"><a href="https://www.deviantart.com/d4rkawaii/art/Special-Brush-Pack-Happy-Halloween-857242107"><img src="images/placeholder/special_brush_pack__happy_halloween__by_d4rkawaii_de6do8r-pre.jpg" alt="brushes"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
+            <div class="scrollseptab" class="scrollsep"><a href="https://insider.in/art-contest-online-apr11-2020-digital-online-event/event"><img src="images/placeholder/xqmhdi2oebfbwef6hhgl.webp" alt="concurso"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
+            <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/bombones.jpg" alt="bombones"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
+            <div class="scrollsep"><a href="index.html"><img src="images/placeholder/Rock.jpg" alt="roca"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
+            <div class="scrollsep"><a href="index.html"><img src="images/placeholder/book.jpg" alt="libro"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
+            <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cookie.jpg" alt="galleta"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p></a></div>
         </section> <!-- cont terc -->
         <section class="reciente">
             <article class="recientenav">
@@ -65,42 +97,41 @@
                 <a href="index.html">aceptar</a>
             </article>
             <article class="galeria">
-                <a href="index.html"><img src="images/placeholder/ph1.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph2.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph3.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph4.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph5.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph6.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph7.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph8.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph9.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph10.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph11.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph12.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph13.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph14.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph15.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph16.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph17.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph18.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph19.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph20.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/ph21.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/cat10.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/cat11.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/cat12.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/cat13.jpg" alt="placeH"></a>
-                <a href="index.html"><img src="images/placeholder/cat14.jpg" alt="placeH"></a>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph1.jpg" alt="placeH"></a></div>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph2.jpg" alt="placeH"></a></div>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph3.jpg" alt="placeH"></a></div>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph4.jpg" alt="placeH"></a></div>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph5.jpg" alt="placeH"></a></div>
+                <div class="scrollseptab" class="scrollsep"><a href="index.html"><img src="images/placeholder/ph6.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph7.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph8.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph9.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph10.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph11.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph12.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph13.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph14.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph15.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph16.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph17.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph18.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph19.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph20.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/ph21.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cat10.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cat11.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cat12.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cat13.jpg" alt="placeH"></a></div>
+                <div class="scrollsep"><a href="index.html"><img src="images/placeholder/cat14.jpg" alt="placeH"></a></div>
             </article>
         </section>
     </main>
     <footer class="pie">
         <div class="sticky">
-            <a href="#arriba"><img src="images/icons/Facebook.png" alt="placeH"></a>
+            <a href="#arriba"><img src="images/icons/130906.png" alt="placeH"></a>
         </div>
         <p>Copyright©</p>
-    </footer>   <!-- copyright, bibliografía, contacto --> 
-    <!-- Script js de bootstrap
-    <script src=""></script> -->
+    </footer>   <!-- copyright, bibliografía, contacto --> <!-- Script js de bootstrap<script src=""></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

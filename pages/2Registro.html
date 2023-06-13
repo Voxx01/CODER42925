@@ -11,13 +11,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilos copy.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="gridPadre2">
-    <header class="titulo">
-    <h1 class="header">Contenido</h1>
-    <nav class="barranav">
-        <!-- Todo lo que es navegación del usuario -->
+    <header id="arriba" class="titulo">
+    <nav class="barranav"><!-- Todo lo que es navegación del usuario -->
+        <h1 class="header">Contenido</h1>
         <ul class="barranavitems">
             <li><a href="../index.html">Volver al inicio</a></li>
             <li><a href="3.0Contenido.html">Contenido</a></li>
@@ -25,6 +24,15 @@
             <li><a href="4Tutoriales.html">Tutoriales</a></li>
             <li><a href="5Contacto.html">Contacto</a></li>
         </ul>
+        <select name="menuBur" id="menuBur" class="menuBur">
+            <!-- NO FUNCIONA CAMBIAR -->
+            <option value="Elegir">Elegir</option>
+            <option value="2Registro"><a href="pages/2Registro.html">Registro</a></option>
+            <option value="3.0Contenido"><a href="pages/3.0Contenido.html">Contenido</a></option>
+            <option value="3.1ContenidoI"><a href="pages/3.1ContenidoI.html">ContenidoI</a></option>
+            <option value="4Tutoriales"><a href="pages/4Tutoriales.html">Tutoriales</a></option>
+            <option value="5Contacto"><a href="pages/5Contacto.html">Contacto</a></option>
+        </select>
     </nav>
     </header>
     <main class="gridHijo2">
@@ -94,9 +102,9 @@
     </main>
     <footer class="pie">
         <div class="sticky">
-            <a href="#arriba"><img src="../images/icons/Facebook.png" alt="placeH"></a>
+            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
         </div>
         <p>Copyright©</p>
-    </footer>   <!-- copyright, bibliografía, contacto --> 
+    </footer>
 </body>
 </html>

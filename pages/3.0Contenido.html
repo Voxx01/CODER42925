@@ -12,14 +12,16 @@
     href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png"
     type="image/x-icon"/>
     <!-- Favicon siempre en el head  -->
+    <!-- CSS Bootstrap <link rel="stylesheet" href=""> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilos copy.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 <body class="gridPadre3">
-    <header class="titulo">
-    <h1 class="header">Contenido</h1>
-    <nav class="barranav">
-        <!-- Todo lo que es navegación del usuario -->
+    <header id="arriba" class="titulo">
+    <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
+        <h1 class="header">Contenido</h1>
         <ul class="barranavitems">
             <li><a href="../index.html">Volver al inicio</a></li>
             <li><a href="3.0Contenido.html">Contenido</a></li>
@@ -27,45 +29,74 @@
             <li><a href="4Tutoriales.html">Tutoriales</a></li>
             <li><a href="5Contacto.html">Contacto</a></li>
         </ul>
+        <select name="menuBur" id="menuBur" class="menuBur">
+            <!-- NO FUNCIONA CAMBIAR -->
+            <option value="Elegir">Elegir</option>
+            <option value="2Registro"><a href="pages/2Registro.html">Registro</a></option>
+            <option value="3.0Contenido"><a href="pages/3.0Contenido.html">Contenido</a></option>
+            <option value="3.1ContenidoI"><a href="pages/3.1ContenidoI.html">ContenidoI</a></option>
+            <option value="4Tutoriales"><a href="pages/4Tutoriales.html">Tutoriales</a></option>
+            <option value="5Contacto"><a href="pages/5Contacto.html">Contacto</a></option>
+        </select>
     </nav>
     </header>
     <main class="gridHijo3">
-    <section for="filtro" class="filtro">
-        <p>pepito clavo un clavito</p>
+    <section for="filtro" class="filtroCon">
         <label>
-        <select name="filtro" id="filtro">
-            <option value="filtros">filtro1</option>
-            <option value="filtros">filtro2</option>
-            <option value="filtros">filtro3</option>
-            <option value="filtros">filtro4</option>
-            <option value="filtros">filtro5</option>
-        </select>
+            <select name="filtro" id="filtro">
+                <option value="filtros">filtro1</option>
+                <option value="filtros">filtro2</option>
+                <option value="filtros">filtro3</option>
+                <option value="filtros">filtro4</option>
+                <option value="filtros">filtro5</option>
+            </select>
         </label>
+        <a href="3.0Contenido.html">filtro</a>
+        <a href="3.0Contenido.html">filtro</a>
+        <a href="3.0Contenido.html">filtro</a>
     </section>
     <!-- Selector de contenido -->
     <section class="selector">
-            <div class="selectorsepmob" class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat1.jpg" alt="cat1"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsepmob" class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat2.jpg" alt="cat2"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsepmob" class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat3.jpg" alt="cat3"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsepmob" class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog1.jpg" alt="dog1"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat1.jpg" alt="cat1"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat2.jpg" alt="cat2"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat3.jpg" alt="cat3"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog1.jpg" alt="dog1"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
             <!-- ( style="width: 300px; height: 200px; object-fit: cover;") cropea la imagen -->
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog2.jpg" alt="dog2"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog3.jpg" alt="dog3"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat4.jpg" alt="cat4"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog4.jpg" alt="dog4"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc1.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc2.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc3.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc4.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc5.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc6.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc7.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc8.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc9.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
-            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc10.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis numquam.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog2.jpg" alt="dog2"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog3.jpg" alt="dog3"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat4.jpg" alt="cat4"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog4.jpg" alt="dog4"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc1.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc2.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc3.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc4.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc5.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc6.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc7.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc8.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc9.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div></div>
+            <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc10.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime vero libero, rerum repellat aspernatur eaque? Maxime quibusdam nam, pariatur mollitia suscipit obcaecati perspiciatis.</p></div></div>
     </section>
     <section class="checkbus">
         <label for="buscador"><input type="search" name="buscador" id="buscador" placeholder="Buscar por nombre"/></label>
+        <section class="filtrocheck">
+            <article class="filtrocheckm">
+                <select name="" id="">
+                    <option value="Elegir">Elegir</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </article>
+            <article class="filtrocheckM">
+                <select name="" id="">
+                    <option value="Elegir">Elegir</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </article>
+        </section>
     </section>
     <section class="check">
             <article class="checkf1">
@@ -86,13 +117,10 @@
     </section>
     </main>
     <footer class="pie">
-    <div class="sticky">
-        <a href="#arriba"
-        ><img src="../images/icons/Facebook.png" alt="placeH"
-        /></a>
-    </div>
-    <p>Copyright©</p>
-    </footer>
-    <!-- copyright, bibliografía, contacto -->
+        <div class="sticky">
+            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
+        </div>
+        <p>Copyright©</p>
+    </footer>  <!-- copyright, bibliografía, contacto -->
 </body>
 </html>
