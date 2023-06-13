@@ -55,7 +55,7 @@ footer {
     border: #cafdff outset 5px;
     margin: 5px;
 }
-.barranav ul {
+.barranavitems {
     list-style-type: none;
     height: 100px;
     display: flex;
@@ -368,6 +368,7 @@ footer {
     background-color: #ffbb00;
     max-height: 600px;
     overflow-y: scroll;
+    padding: 20px;
 }
 .selector::-webkit-scrollbar {
     display: none;
@@ -384,16 +385,6 @@ footer {
 .selectortxt {
     background-color: #cafdff;
     height: 100px;
-}
-.selectortxt:hover {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    position: relative;
-    bottom: 25px;
-    background-color: #00f7ff;
-    height: 80px;
-    overflow-y: scroll;
 }
 .check {
     grid-area: check;
@@ -499,7 +490,6 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    background-color: orangered;
 }
 .previewlink a {
     background-color: #ffffff;
@@ -614,7 +604,7 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
-    .barranav li {
+    .barranavitems li {
         display: none;
     }
     .menuBur {
@@ -629,7 +619,6 @@ footer {
         "slide slide"
         "reciente scroll";
     }
-
     .gridHijo1 a {
         background-color: transparent;
     }
@@ -644,13 +633,11 @@ footer {
         flex-flow: row wrap;
         justify-content: space-around;
     }
-    .galeria img {
-    width: 350px;
-    height: 200px;
-    }
     .reciente {
         height: 100%;
         overflow-x: hidden;
+        margin: 20px 10px;
+        border: 5px #ff5e00 solid;
     }
     .recientenav {
         display: flex;
@@ -675,7 +662,8 @@ footer {
     }
     .scroll {
         height: 100%;
-        padding: 2px;
+        margin: 20px 10px;
+        border: 5px magenta solid;
     }
     .scroll p {
         font-size: small;
@@ -688,12 +676,6 @@ footer {
     }
     /* IndexBs */
     .carousel-inner img {
-        height: 480px;
-    }
-    .carousel-control-prev {
-        height: 480px;
-    }
-    .carousel-control-next {
         height: 480px;
     }
     /* 3.0Contenido */
@@ -755,9 +737,42 @@ footer {
         justify-content: space-around;
         background-color: #ff5e00;
     }
+/* 3.1ContenidoI */
+    .gridHijo31 {
+        grid-area: medio31;
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 1fr 200px; 
+        grid-template-areas:
+        "preview" 
+        "datos"
+        "mas";
+    }
+    .preview {
+        width: 750px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 5px #8a0000 solid;
+    }
+    .previewimg {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    .datos {
+        width: 750px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 5px magenta solid;
+    }
+    .mas {
+        width: 750px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border: 5px #4789c7 solid;
+    }
 }
 /* Phono */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 425px) {
     .selector::-webkit-scrollbar {
         display: none;
     }
@@ -767,8 +782,11 @@ footer {
         justify-content: space-around;
         align-items: center;
     }
-    .barranav li {
+    .barranavitems li {
         display: none;
+    }
+    .menuBur {
+        display: flex;
     }
     .menuBur {
         display: flex;
@@ -783,7 +801,6 @@ footer {
         "reciente"
         "scroll";
     }
-
     .slide {
         height: 100%;
         margin: 10px;
@@ -800,11 +817,19 @@ footer {
         margin: 10px;
     }
     .galeria img {
-        width: 450px;
-        height: 300px;
         margin: 10px;
         border: #33ff00 solid;
         object-fit: cover;
+    }
+    .reciente {
+        height: 100%;
+        margin: 20px 10px;
+        border: 5px  #ff5e00 solid;
+    }
+    .scroll {
+        height: 100%;
+        margin: 20px 10px;
+        border: 5px magenta solid;
     }
     .scroll img {
         object-fit: cover;
@@ -813,17 +838,11 @@ footer {
     .carousel-inner img {
         height: 310px;
     }
-    .carousel-control-prev {
-        height: 310px;
-    }
-    .carousel-control-next {
-        height: 310px;
-    }
     /* 2Registro */
     .gridHijo2 {
         grid-area: medio2;
         grid-template-columns:1fr;
-        grid-row: repeat (3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
         "registro"
         "regisCon"
@@ -834,7 +853,7 @@ footer {
         display: grid;
         grid-area: medio3;
         grid-template-columns: 1fr;
-        grid-template-rows: 80px 2fr;
+        grid-template-rows: 80px 1fr;
         grid-template-areas:
         "checkbus"
         "selector";
@@ -866,7 +885,8 @@ footer {
         margin-left: 10px;
     }
     .selector img {
-        width: 400px;
+        width: 100%;
+        object-fit: cover;
     }
     .selectorsep {
         display: flex;
@@ -878,5 +898,56 @@ footer {
     }
     .selectortxt {
         display: none;
+    }
+    /* 3.1ContenidoI */
+    .gridHijo31 {
+        grid-area: medio31;
+        grid-template-columns: 425px;
+        grid-template-rows: 400px 1fr 200px; 
+        grid-template-areas:
+        "preview" 
+        "datos"
+        "mas";
+    }
+    .preview {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 100px;
+        grid-template-areas: 
+        "previewimg"
+        "previewlink";
+        width: 400px;
+        margin-left: 10px;
+        margin-top: 5px;
+        border: 5px magenta solid;
+    }
+    .previewimg {
+        grid-area: previewimg;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    .previewimg img {
+        object-fit: cover;
+        width: 170px;
+    }
+    .previewlink {
+        grid-area: previewlink;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    .previewlink a {
+        width: 100px;
+    }
+    .datos {
+        width: 400px;
+        margin-left: 10px;
+        border: 5px magenta solid;
+    }
+    .mas {
+        width: 400px;
+        margin-left: 10px;
+        border: 5px #4789c7 solid;
     }
 }
