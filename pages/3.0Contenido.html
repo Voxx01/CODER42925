@@ -1,129 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArtHeart</title>
-    <!-- Título (pestaña del navegador) -->
-    <!-- Favicon -->
-    <link
-    rel="shortcut icon"
-    href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png"
-    type="image/x-icon"/>
-    <!-- Favicon siempre en el head  -->
-    <!-- CSS Bootstrap <link rel="stylesheet" href=""> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css"/>
-</head>
-<body class="gridPadre3">
-    <header id="arriba" class="titulo">
-    <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
-        <h1 class="header">Contenido</h1>
-        <ul class="barranavitems">
-            <li><a href="../index.html">Volver al inicio</a></li>
-            <li><a href="3.0Contenido.html">Contenido</a></li>
-            <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
-            <li><a href="4Tutoriales.html">Tutoriales</a></li>
-            <li><a href="5Contacto.html">Contacto</a></li>
-        </ul>
-        <div class="menuBur">
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-sm dropdown-toggle text-white bg-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">Páginas</button>
-                <ul class="dropdown-menu text-white bg-dark">
-                    <li><a href="../index.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al inicio</a></li>
-                    <li><a href="3.0Contenido.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contenido</a></li>
-                    <li><a href="3.1ContenidoI.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">ContenidoI</a></li>
-                    <li><a href="4Tutoriales.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Tutoriales</a></li>
-                    <li><a href="5Contacto.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contacto</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contenido AH</title>
+        <!-- Título (pestaña del navegador) -->
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"/>
+        <!-- Favicon siempre en el head  -->
+        <!-- CSS Bootstrap <link rel="stylesheet" href=""> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/styles.css"/>
+    </head>
+    <body class="gridPadre3">
+        <header id="arriba" class="titulo">
+            <nav>  <!-- Todo lo que es navegación del usuario -->
+                <div class="navDesktop">
+                    <h1>Contenido</h1>
+                    <ul class="barranavitems">
+                        <li><a href="../index.html">Volver al inicio</a></li>
+                        <li><a href="2Registro.html">Registro</a></li>
+                        <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
+                        <li><a href="4Tutoriales.html">Tutoriales</a></li>
+                        <li><a href="5Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle text-white bg-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">Páginas</button>
+                    <ul class="dropdown-menu text-white bg-dark">
+                        <li><a href="../index.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Volver al inicio</a></li>
+                        <li><a href="2Registro.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registro</a></li>
+                        <li><a href="3.1ContenidoI.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">ContenidoI</a></li>
+                        <li><a href="4Tutoriales.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Tutoriales</a></li>
+                        <li><a href="5Contacto.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="gridHijo3">
+            <section for="filtro" class="filtroPrincipal">
+                <label>
+                    <select name="filtro" id="filtro">
+                        <option value="filtros">filtro1</option>
+                        <option value="filtros">filtro2</option>
+                        <option value="filtros">filtro3</option>
+                        <option value="filtros">filtro4</option>
+                        <option value="filtros">filtro5</option>
+                    </select>
+                </label>
+                <a href="3.0Contenido.html">filtro</a>
+                <label>
+                    <select name="filtro" id="filtro">
+                        <option value="filtros">filtro6</option>
+                        <option value="filtros">filtro7</option>
+                        <option value="filtros">filtro8</option>
+                        <option value="filtros">filtro9</option>
+                        <option value="filtros">filtro10</option>
+                    </select>
+                </label>
+                <a href="3.0Contenido.html">filtro</a>
+            </section>
+            <section class="galeriaContenido">
+                <div class="imgsContenido">
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat1.jpg" alt="cat1"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat2.jpg" alt="cat2"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat3.jpg" alt="cat3"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog1.jpg" alt="dog1"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog2.jpg" alt="dog2"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog3.jpg" alt="dog3"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/cat4.jpg" alt="cat4"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/dog4.jpg" alt="dog4"/></a>
+                    <a href="3.1ContenidoI.html"><img src="../images/placeholder/lc1.jpg" alt="paisaje"/></a>
+                </div>
+            </section>
+            <section class="buscadorContenido">
+                <label for="buscador"><input type="search" name="buscador" id="buscador" placeholder="Buscar por nombre"/></label>
+                <section class="busMobContenido">
+                    <article>
+                        <select name="" id="">
+                            <option value="Elegir">Elegir</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </article>
+                    <article>
+                        <select name="" id="">
+                            <option value="Elegir">Elegir</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </article>
+                </section>
+            </section>
+            <section class="checkContenido">
+                    <article class="checkF1">
+                        <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro01</label>
+                        <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro02</label>
+                        <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro03</label>
+                    </article>
+                    <article class="checkF2">
+                        <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro04</label>
+                        <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro05</label>
+                        <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro06</label>
+                    </article>
+                    <article class="checkF3">
+                        <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro07</label>
+                        <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro08</label>
+                        <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro09</label>
+                    </article>
+            </section>
+        </main>
+        <footer class="pie">
+            <div class="sticky">
+                <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
             </div>
-        </div>
-    </nav>
-    </header>
-    <main class="gridHijo3">
-    <section for="filtro" class="filtroCon">
-        <label>
-            <select name="filtro" id="filtro">
-                <option value="filtros">filtro1</option>
-                <option value="filtros">filtro2</option>
-                <option value="filtros">filtro3</option>
-                <option value="filtros">filtro4</option>
-                <option value="filtros">filtro5</option>
-            </select>
-        </label>
-        <a href="3.0Contenido.html">filtro</a>
-        <a href="3.0Contenido.html">filtro</a>
-        <a href="3.0Contenido.html">filtro</a>
-    </section>
-    <!-- Selector de contenido -->
-    <section class="selector">
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat1.jpg" alt="cat1"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat2.jpg" alt="cat2"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat3.jpg" alt="cat3"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog1.jpg" alt="dog1"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <!-- ( style="width: 300px; height: 200px; object-fit: cover;") cropea la imagen -->
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog2.jpg" alt="dog2"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog3.jpg" alt="dog3"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/cat4.jpg" alt="cat4"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/dog4.jpg" alt="dog4"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc1.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc2.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc3.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc4.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc5.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc6.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc7.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc8.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc9.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-        <div class="selectorsep"><a href="3.1ContenidoI.html"><img src="../images/placeholder/lc10.jpg" alt="paisaje"/></a><div class="selectortxt"><h4>texto</h4></div></div>
-    </section>
-    <section class="checkbus">
-        <label for="buscador"><input type="search" name="buscador" id="buscador" placeholder="Buscar por nombre"/></label>
-        <section class="filtrocheck">
-            <article class="filtrocheckm">
-                <select name="" id="">
-                    <option value="Elegir">Elegir</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-            </article>
-            <article class="filtrocheckM">
-                <select name="" id="">
-                    <option value="Elegir">Elegir</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-            </article>
-        </section>
-    </section>
-    <section class="check">
-            <article class="checkf1">
-                <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro01</label>
-                <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro02</label>
-                <label for="filtros1"><input type="checkbox" name="filtros1" id="filtros1" />Filtro03</label>
-            </article>
-            <article class="checkf2">
-                <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro04</label>
-                <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro05</label>
-                <label for="filtros2"><input type="radio" name="filtros2" id="filtros2" />Filtro06</label>
-            </article>
-            <article class="checkf3">
-                <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro07</label>
-                <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro08</label>
-                <label for="filtros3"><input type="checkbox" name="filtros3" id="filtros3" />Filtro09</label>
-            </article>
-    </section>
-    </main>
-    <footer class="pie">
-        <div class="sticky">
-            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
-        </div>
-        <p>Copyright©</p>
-    </footer>  <!-- copyright, bibliografía, contacto -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
+            <p>Copyright©</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
 </html>

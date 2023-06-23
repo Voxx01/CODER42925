@@ -11,85 +11,66 @@
     border: 0;
 }
 /* General */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background-color: #4789c7;
-    box-shadow: inset 0 0 5px grey;
-}
-::-webkit-scrollbar-thumb {
-    background: #4751dd;
-    border-radius: 10px;
-    height: 20px;
-}
 a:visited, a {
-    color: blue;
-    font-size: 20px;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 700;
 }
 
 body {
     background-color: #001427;
     font-family: 'Montserrat', sans-serif;
 }
-footer {
-        margin-top: 10px;
-        background-color: #b60900;
-    }
 /* Barra de navegación */
-.header {
-    background-color:#7b2cbf;
-    color: #cee7ff;
-    border-radius: 10px;
-    padding: 5px;
-}
-.barranav {
+nav {
     grid-area: titulo;
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    color: aliceblue;
     background-color: #3c096c;
     border: #cafdff outset 5px;
     margin: 5px;
+    padding: 5px;
 }
-.barranavitems {
+.navDesktop {
+    grid-area: titulo;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.navDesktop ul {
+    margin: 0;
+    padding: 0;
+    width: 75%;
     list-style-type: none;
     height: 100px;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-around;
     align-items: center;
 }
-.barranavitems a:hover {
-    background-color: #7b2cbf;
-}
-.barranavitems a {
-    color: aliceblue;
+.navDesktop a {
     border: #cafdff inset;
     padding: 10px;
     border-radius: 10px;
 }
-.menuBur {
+.navDesktop a:hover {
+    background-color: #7b2cbf;
+}
+.btn-group {
     display: none;
 }
 .pie {
     grid-area: pie;
-    width: auto;
-    background-color: #3c096c;
-    border: #cafdff outset 5px;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     color: aliceblue;
+    background-color: #3c096c;
+    border: #cafdff outset 5px;
+    margin: 5px;
+    padding: 5px;
 }
-/* Margenes y bordes */
-/* aside, article, header {
-    border-style: solid;
-    border-color: #8d0801;
-} */
 /* Index */
 .gridPadre1 {
     display: grid;
@@ -100,7 +81,6 @@ footer {
     "medio1"
     "pie";
 }
-
 .gridHijo1 img {
     opacity: 85%;
 }
@@ -111,10 +91,10 @@ footer {
     display: grid;
     grid-area: medio1;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: 750px 800px;
     grid-template-areas:
-    "slide scroll"
-    "reciente scroll";
+    "slide news"
+    "galeriaIndex news";
 }
 .slide {
     grid-area: slide;
@@ -122,12 +102,8 @@ footer {
     flex-flow: column wrap;
     justify-content: start;
     align-content: space-around;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-.slide h2 {
-    color: #b60900;
-    background-color: #ffbb00;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .slide a {
     background-color: black;
@@ -136,75 +112,75 @@ footer {
     object-fit: cover;
     width: 100%;
 }
-.scroll {
-    grid-area: scroll;
+.news {
+    grid-area: news;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-content: space-around;
     background-color: magenta;
-    margin: 5px;
+    border: #ff5e00 solid;
+    margin: 10px;
+    margin-top: 25px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
-.scroll::-webkit-scrollbar {
-    display: none;
-}
-.scroll h4 {
+.news h4 {
+    position: sticky;
+    top: 1px;
     height: 60px;
     width: 100%;
     text-align: center;
     font-size: 60px;
     background-color: #cafdff;
+    border: #4751dd solid;
     padding-bottom: 10px;
     margin-bottom: 5px;
 }
-.scroll img {
+.news img {
     width: 100%;
     object-fit: cover;
 }
-.scroll p {
+.news p {
     background-color: teal;
     color: aliceblue;
     width: 100%;
 }
-.recientenav {  
+.galeriaOpc {  
+    position: sticky;
+    top: 0.1px;
     background-color: #ffbb00;
     display: flex;
-    flex-flow: row nowrap;
     padding: 2px;
     justify-content: space-between;
     border: #c02600 solid;
 }
-.recientenav select {
+.galeriaOpc select {
     font-weight: bolder;
     text-align: center;
     border: #b60900 solid;
 }
-.recientenav a {
+.galeriaOpc a {
     background-color: #1c8b00;
     border: #b60900 solid;
     text-align: center;
 }
-.recientenav input {
+.galeriaOpc input {
     border: #b60900 solid;
 }
-.reciente {
-    grid-area: reciente;
+.galeriaIndex {
+    grid-area: galeriaIndex;
     background-color: #ff5e00;
     overflow-y: scroll;
     padding: 5px;
-    margin-left: 5px;
+    margin: 0 5px;
 }
-.reciente::-webkit-scrollbar {
-    display: none;
-}
-.galeria {
+.galeriaimg {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-.galeria img {
+.galeriaimg img {
     width: 300px;
     height: 200px;
     margin: 5px 3px;
@@ -212,7 +188,7 @@ footer {
 }
 .sticky {
     position: sticky;
-    bottom: 0;
+    bottom: 1px;
     background-color:#cafdff;
     border-radius: 45%;
     padding: 5px;
@@ -266,64 +242,83 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "registro regisCon iniciarS";
 }
-.registrarse {
+.gridHijo2 h2 {
+    text-align: center;
+    background-color: orange;
+}
+.registro {
     grid-area: registro;
-    background-color: mediumslateblue;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: #8400ff;
+    border: #3e0077 solid;
     width: 80%;
     max-width: 520px;
+    margin-top: 20px;
+    margin-left: 50px;
 }
-.registrarse label {
+.registroDatos{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+.registroDatos input, .registroDatos select  {
+    border: #2f00ff solid;
+    margin: 10px 0;
+}
+.logos {
+    grid-area: regisCon;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: #740600;
+    border: #8d0700 solid;
+    width: 80%;
+    max-width: 350px;
+    height: 125px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.logos img {
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: #c00a00 solid;
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+}
+.logosIcons {
+    display: flex;
+    justify-content: space-around;
+}
+.Is {
+    grid-area: iniciarS;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: #ff8800;
+    width: 80%;
+    max-width: 520px;
+    max-height: 480px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.Is label, .Is a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
 }
-.logos {
-    grid-area: regisCon;
-    background-color: rgb(117, 3, 24);
-    width: 80%;
-    height: 20%;
-    max-width: 350px;
-}
-.logos h2,.registrarse h2,.Iniciarsesión h2 {
-    text-align: center;
-    background-color: orange;
-    width: 100%;
-}
-.logos img {
-    background-color: aliceblue;
-    object-fit: cover;
-    width: 40px;
-    height: 40px;
-}
-.logosimg {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-.Is {
-    grid-area: iniciarS;
-    background-color: tomato;
-    width: 80%;
-}
-.Is label{
-    padding-left: 80px;
-}
-.Is a {
-    padding: 0 80px;
-}
-.Iniciarsesión input {
-    padding-left: 80px;
-    width: 73%;
-    height: 60px;
-}
-.Iniciarsesión label{
-    padding: 10px 80px;
+.Is input{
+    border: #4751dd solid;
 }
 .Botom {
     background-color: teal;
     border: goldenrod solid;
-    width: 65%;
+    width: 100%;
     height: 90px;
 }
 .extra{
@@ -345,23 +340,23 @@ footer {
     grid-template-columns: 2fr 2fr 1fr;
     grid-template-rows: 80px 3fr;
     grid-template-areas:
-    "filtroCon filtroCon checkbus"
-    "selector selector check";
+    "filtroPrincipal filtroPrincipal buscadorContenido"
+    "galeriaContenido galeriaContenido checkContenido";
 }
-.filtrocheck {
+.busMobContenido {
     display: none;
 }
-.filtroCon {
-    grid-area: filtroCon;
+.filtroPrincipal {
+    grid-area: filtroPrincipal;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(117, 3, 24);
     margin: 5px 10px;
 }
-.selector {
+.galeriaContenido {
     display: flex;
-    grid-area: selector;
+    grid-area: galeriaContenido;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
@@ -370,10 +365,7 @@ footer {
     overflow-y: scroll;
     padding: 20px;
 }
-.selector::-webkit-scrollbar {
-    display: none;
-}
-.selector img {
+.galeriaContenido img {
     object-fit: cover;
     width: 330px;
     height: 250px;
@@ -386,8 +378,8 @@ footer {
     background-color: #cafdff;
     height: 100px;
 }
-.check {
-    grid-area: check;
+.checkContenido {
+    grid-area: checkContenido;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -396,8 +388,8 @@ footer {
     margin: 5px 15px;
     margin-left: 5px;
 }
-.checkbus {
-    grid-area: checkbus;
+.buscadorContenido {
+    grid-area: buscadorContenido;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -406,17 +398,17 @@ footer {
     margin: 5px 15px;
     margin-left: 5px;
 }
-.checkbus input {
+.buscadorContenido input {
     border: #001427 solid;
 }
-.checkf1 {
+.checkF1 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     background-color: #8d0700;
     border: #cafdff outset;
 }
-.checkf1 label {
+.checkF1 label {
     padding-left: 20px;
     border: goldenrod inset;
     padding: 5px;
@@ -424,14 +416,14 @@ footer {
     height: 30px;
     background-color: #c00a00;
 }
-.checkf2 {
+.checkF2 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     background-color: #1c8b00;
     border: #cafdff outset;
 }
-.checkf2 label {
+.checkF2 label {
     padding-left: 20px;
     border: goldenrod inset;
     padding: 5px;
@@ -439,14 +431,14 @@ footer {
     height: 30px;
     background-color: #33ff00;
 }
-.checkf3 {
+.checkF3 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     background-color: #32008f;
     border: #cafdff outset;
 }
-.checkf3 label {
+.checkF3 label {
     padding-left: 20px;
     border: goldenrod inset;
     padding: 5px;
@@ -476,39 +468,39 @@ footer {
 .preview {
     grid-area: preview;
     background-color: #b60900;
-    margin-bottom: 10px;
+    margin: 10px 10px;
 }
 .previewimg {
     display: flex;
-    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .previewimg img {
     width: 350px;
+    margin: 10px;
 }
 .previewlink {
     grid-area: previewlink;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: start;
+    background-color: #5900ff;
 }
 .previewlink a {
-    background-color: #ffffff;
+    background-color: #818181;
+    font-size:x-large;
     margin: 5px;
     padding-top: 5px;
-    width: 200px;
+    width: 170px;
     height: 50px;
     text-align: center;
-}
-.preview img {
-    background-color: #0ecf38;
-    margin: 10px;
 }
 .datos {
     grid-area: datos;
     display: flex;
     flex-flow: column nowrap;
     background-color: #ff00d4;
-    margin-bottom: 10px;
+    margin: 10px 10px;
+    overflow-y: scroll;
 }
 .datos h3 {
     background-color: #0ecf38;
@@ -516,9 +508,9 @@ footer {
 }
 .datosicons {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 10px 0;
+    width: 400px;
 }
 .datosicons img{
     height: 20px;
@@ -530,15 +522,14 @@ footer {
 .mas {
     grid-area: mas;
     display: flex;
-    flex-flow: row nowrap;
     background-color: #b60900;
+    border: #b60900 solid;
     overflow-y: hidden;
+    margin: 0 10px;
 }
 .mas img {
-    border: #4789c7 solid;
-    height: 200px;
+    margin: 5px;
     object-fit: cover;
-
 }
 /* 4Tutoriales */
 .gridPadre4 {
@@ -598,17 +589,21 @@ footer {
 /* Media-queries */
 /* Tablet */
 @media screen and (max-width: 768px) {
-    /* barraNav */
-    .barranav {
+    /* navDesktop */
+    nav {
         display: flex;
+
         justify-content: space-around;
-        align-items: center;
+        height: 120px;
     }
-    .barranavitems li {
+    .navDesktop {
+        width: 200px;
+    }
+    .navDesktop ul {
         display: none;
     }
-    .menuBur {
-        display: flex;
+    .btn-group {
+        display: inline-block;
     }
     /* Index */
     .gridHijo1 {
@@ -617,7 +612,7 @@ footer {
         grid-template-rows: 500px 500px;
         grid-template-areas:
         "slide slide"
-        "reciente scroll";
+        "galeriaIndex news";
     }
     .gridHijo1 a {
         background-color: transparent;
@@ -628,18 +623,18 @@ footer {
     .slide img {
         width: 100%;
     }
-    .galeria {
+    .galeriaimg {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
     }
-    .reciente {
-        height: 100%;
+    .galeriaIndex {
+        height: 95%;
         overflow-x: hidden;
         margin: 20px 10px;
         border: 5px #ff5e00 solid;
     }
-    .recientenav {
+    .galeriaOpc {
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
@@ -647,97 +642,108 @@ footer {
         height: 200px;
         background-color: #ffbb00;
     }
-    .recientenav select {
+    .galeriaOpc select {
         font-weight: bolder;
         text-align: center;
         border: #b60900 solid;
     }
-    .recientenav a {
+    .galeriaOpc a {
         background-color: #1c8b00;
         border: #b60900 solid;
         text-align: center;
     }
-    .recientenav input {
+    .galeriaOpc input {
         border: #b60900 solid;
     }
-    .scroll {
-        height: 100%;
+    .news {
+        height: 90%;
         margin: 20px 10px;
         border: 5px magenta solid;
     }
-    .scroll p {
+    .news p {
         font-size: small;
     }
-    .scroll h4 {
+    .news h4 {
         font-size:large;
-    }
-    .scrollsep {
-        display: none;
     }
     /* IndexBs */
     .carousel-inner img {
         height: 480px;
     }
+    /* 2.0Registro */
+    .gridHijo2 {
+        display: grid;
+        grid-area: medio2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "iniciarS registro" 
+        "regisCon registro";
+    }
+    .registro {
+        height: 500px;
+    }
     /* 3.0Contenido */
     .gridHijo3 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 100px 150px 1fr;
+        grid-template-rows: 0.3fr 0.3fr 1fr;
         grid-template-areas:
-        "filtroCon checkbus"
-        "check check"
-        "selector selector";
+        "filtroPrincipal buscadorContenido"
+        "checkContenido checkContenido"
+        "galeriaContenido galeriaContenido";
     }
-    .filtroCon {
+    .filtroPrincipal {
         margin: 4px 0;
         margin-left: 7px;
     }
-    .checkbus {
+    .buscadorContenido {
         display: flex;
         justify-content: space-around;
         margin: 4px 0;
         margin-right: 7px;
     }
-    .check {
+    .checkContenido {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: center;
-        margin: 4px 7px;
+        margin: 4px 7px
     }
-    .checkf1 {
+    .checkF1 {
         width: 33%;
     }
-    .checkf2 {
+    .checkF2 {
         width: 33%;
     }
-    .checkf3 {
+    .checkF3 {
         width: 33%;
     }
-    .selector {
+    .galeriaContenido {
         display: flex;
         flex-flow: row wrap;
         justify-self: center;
         margin: 4px 80px;
+        width: 95%;
+        border: #c00a00 5px solid;
     }
-    .selector img {
+    .imgsContenido {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        background-color: #ff5e00;
+    }
+    .imgsContenido img {
         width: 600px;
+        height: 300px;
+        margin: 10px 0;
     }
-    .selectorsep {
-        width: 600px;
-    }
-    .selectortxt {
-        max-height: 40px;
-    }
-    .selectortxt p {
-        display: none;
-    }
-    .filtrocheck {
+    .busMobContenido {
         display: flex;
         justify-content: space-around;
         background-color: #ff5e00;
     }
-/* 3.1ContenidoI */
+    /* 3.1ContenidoI */
     .gridHijo31 {
         grid-area: medio31;
         grid-template-columns: 1fr;
@@ -747,50 +753,9 @@ footer {
         "datos"
         "mas";
     }
-    .preview {
-        width: 750px;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 5px #8a0000 solid;
-    }
-    .previewimg {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-    }
-    .datos {
-        width: 750px;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 5px magenta solid;
-    }
-    .mas {
-        width: 750px;
-        margin-left: 10px;
-        margin-top: 10px;
-        border: 5px #4789c7 solid;
-    }
 }
 /* Phono */
 @media screen and (max-width: 425px) {
-    .selector::-webkit-scrollbar {
-        display: none;
-    }
-    /* barraNav */
-    .barranav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .barranavitems li {
-        display: none;
-    }
-    .menuBur {
-        display: flex;
-    }
-    .menuBur {
-        display: flex;
-    }
     /* Index */
     .gridHijo1 {
         grid-area: medio1;
@@ -798,8 +763,8 @@ footer {
         grid-template-rows: 325px 400px 300px;
         grid-template-areas:
         "slide"
-        "reciente"
-        "scroll";
+        "galeriaIndex"
+        "news";
     }
     .slide {
         height: 100%;
@@ -809,29 +774,19 @@ footer {
     .slide img {
         width: 100%;
     }
-    .galeria {
+    .galeriaimg {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
         margin: 10px;
     }
-    .galeria img {
+    .galeriaimg img {
         margin: 10px;
         border: #33ff00 solid;
         object-fit: cover;
     }
-    .reciente {
-        height: 100%;
-        margin: 20px 10px;
-        border: 5px  #ff5e00 solid;
-    }
-    .scroll {
-        height: 100%;
-        margin: 20px 10px;
-        border: 5px magenta solid;
-    }
-    .scroll img {
+    .news img {
         object-fit: cover;
     }
     /* IndexBs */
@@ -842,67 +797,41 @@ footer {
     .gridHijo2 {
         grid-area: medio2;
         grid-template-columns:1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 650px 150px 550px;
         grid-template-areas:
         "registro"
         "regisCon"
         "iniciarS";
+    }
+    .registro {
+        height: 600px;
     }
     /* 3.0Contenido */
     .gridHijo3 {
         display: grid;
         grid-area: medio3;
         grid-template-columns: 1fr;
-        grid-template-rows: 80px 1fr;
+        grid-template-rows: 0.2fr 1fr 0.15fr 0.25fr;
         grid-template-areas:
-        "checkbus"
-        "selector";
+        "buscadorContenido"
+        "galeriaContenido"
+        "filtroPrincipal"
+        "checkContenido";
     }
-    .filtrocheck {
-        display: flex;
-        justify-content: space-around;
-        background-color: #ff5e00;
+    .buscadorContenido {
+        margin-left: 5px;
     }
-    .checkbus {
-        margin: 5px 0;
-        margin-right: 30px;
-        margin-left: 10px;
+    .imgsContenido img {
+        width: 350px;
+        height: 200px;
     }
-    .check {
-        display: none;
-    }
-    .filtroCon {
-        display: none;
-    }
-    .selector {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        padding: 0 5px;
-        background-color: #0ecf38;
-        margin: 0;
-        margin-right: 30px;
-        margin-left: 10px;
-    }
-    .selector img {
-        width: 100%;
-        object-fit: cover;
-    }
-    .selectorsep {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        width: 400px;
-        margin: 5px 12px;
-        margin-right: 10px;
-    }
-    .selectortxt {
-        display: none;
+    .filtroPrincipal {
+        margin-right: 5px;
     }
     /* 3.1ContenidoI */
     .gridHijo31 {
         grid-area: medio31;
-        grid-template-columns: 420px;
+        grid-template-columns: 1fr;
         grid-template-rows: 400px 1fr 200px; 
         grid-template-areas:
         "preview" 
@@ -924,7 +853,7 @@ footer {
     .previewimg {
         grid-area: previewimg;
         display: flex;
-        flex-flow: row nowrap;
+
         justify-content: space-around;
     }
     .previewimg img {

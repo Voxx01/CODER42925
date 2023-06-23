@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtHeart</title> <!-- Título (pestaña del navegador) -->
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
-    <!-- CSS bootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-    <header id="arriba" class="titulo">
-        <nav class="barranav">  <!-- Todo lo que es navegación del usuario -->
-            <h1 class="header">Contacto</h1>
-            <ul class="barranavitems">
-                <li><a href="../index.html">Volver al inicio</a></li>
-                <li><a href="2Registro.html">Registrarse</a></li>
-                <li><a href="3.0Contenido.html">Contenido</a></li>
-                <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
-                <li><a href="4Tutoriales.html">Tutoriales</a></li>
-            </ul>
-            <div class="menuBur">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto AH</title> <!-- Título (pestaña del navegador) -->
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
+        <!-- CSS bootStrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header id="arriba" class="titulo">
+            <nav class="barranav">
+                <div class="navDesktop">
+                    <h1>Contacto</h1>
+                    <ul>
+                        <li><a href="../index.html">Volver al inicio</a></li>
+                        <li><a href="2Registro.html">Registrarse</a></li>
+                        <li><a href="3.0Contenido.html">Contenido</a></li>
+                        <li><a href="3.1ContenidoI.html">ContenidoI</a></li>
+                        <li><a href="4Tutoriales.html">Tutoriales</a></li>
+                    </ul>
+                </div>
                 <div class="btn-group">
                     <button class="btn btn-secondary btn-sm dropdown-toggle text-white bg-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">Páginas</button>
                     <ul class="dropdown-menu text-white bg-dark">
@@ -34,33 +35,32 @@
                         <li><a href="4Tutoriales.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Tutoriales</a></li>
                     </ul>
                 </div>
+            </nav>
+        </header>
+        <main>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </main>
+        <footer class="pie">
+            <div class="sticky">
+                <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
             </div>
-        </nav>
-    </header>
-    <main>
-        <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </main>
-    <footer class="pie">
-        <div class="sticky">
-            <a href="#arriba"><img src="../images/icons/130906.png" alt="placeH"></a>
-        </div>
-        <p>Copyright©</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
+            <p>Copyright©</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
 </html>
