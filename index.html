@@ -1,12 +1,11 @@
-<!DOCTYPE html> <!-- Tipo de Doc -->
-<html lang="es"> <!-- Idioma -->
+<!DOCTYPE html>
+<html lang="es">
     <head> <!-- Parte privada, comunicación web ordenador -->
         <meta charset="UTF-8"> <!-- Permite iconos, ñ, tildes, etc -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad Edge,Ie -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive web -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ArtHeart</title> <!-- Título (pestaña del navegador) -->
         <!-- Favicon -->
-        <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/001/204/729/original/pencil-png.png" type="image/x-icon"><!-- Favicon siempre en el head  -->
+        <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon">
         <!-- Fuentes -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +19,16 @@
         <!-- Palabras clave -->
         <meta name="keywords" content="arte, portafolio, arte digital, galeria, ideas, referencias, networking">
     </head>
-    <body class="gridPadre1">  <!-- contenido de pág -->
+    <body>
         <header id="arriba">
-            <nav>  <!-- Todo lo que es navegación del usuario -->
-                <div class="navDesktop">
+            <nav>
+                <div class="nav-desktop">
                     <h1>ArtHeart</h1>  
                     <ul>
-                        <li><a href="pages/2Registro.html">Registro</a></li>
-                        <li><a href="pages/3.0Contenido.html">Contenido</a></li>
-                        <li><a href="pages/3.1ContenidoI.html">ContenidoI</a></li>
-                        <li><a href="pages/4PsyRs.html">Preguntas frecuentes</a></li>
+                        <li><a href="pages/Registro.html">Registro</a></li>
+                        <li><a href="pages/Contenido.html">Contenido</a></li>
+                        <li><a href="pages/ContenidoI.html">ContenidoI</a></li>
+                        <li><a href="pages/FAQs.html">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
                 <div class="navbar">
@@ -44,41 +43,33 @@
                             </div>
                             <div class="offcanvas-body">
                                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                    <li><a href="pages/2Registro.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Registro</a></li>
-                                    <li><a href="pages/3.0Contenido.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Contenido</a></li>
-                                    <li><a href="pages/3.1ContenidoI.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">ContenidoI</a></li>
-                                    <li><a href="pages/4PsyRs.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Preguntas frecuentes</a></li>
+                                    <li><a href="pages/Registro.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Registro</a></li>
+                                    <li><a href="pages/Contenido.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Contenido</a></li>
+                                    <li><a href="pages/ContenidoI.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">ContenidoI</a></li>
+                                    <li><a href="pages/FAQs.html" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-black">Preguntas frecuentes</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-        </header> <!-- encabezado -->
-        <main class="gridHijo1"> <!-- Principal -->
+        </header>
+        <main class="grid-hijo1">
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="https://www.artstation.com/artwork/lR8G1G" target="_blank"><img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean"></a>
+                        <a href="https://www.artstation.com/artwork/lR8G1G" target="_blank"><img src="images/imgIndex/sean.jpg" class="d-block w-100" alt="Ilustración de SeanSketches"></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean">
+                        <a href="https://www.artstation.com/?sort_by=trending&dimension=all" target="_blank"><img src="images/imgIndex/slide3.jpg" class="d-block w-100" alt="Ilustración de totem"></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/placeholder/darktide.jpg" class="d-block w-100" alt="darktide">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/placeholder/sean-budanio-1.jpg" class="d-block w-100" alt="sean">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/placeholder/darktide.jpg" class="d-block w-100" alt="darktide">
+                        <a href="https://www.artstation.com/?sort_by=trending&dimension=all" target="_blank"><img src="images/imgIndex/darktide.jpg" class="d-block w-100" alt="Ilustración de WarHammer40k"></a>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -93,16 +84,16 @@
             <section class="news">
                 <h4>Novedades</h4>
                 <div>
-                    <a href="https://www.deviantart.com/d4rkawaii/art/Special-Brush-Pack-Happy-Halloween-857242107"><img src="images/placeholder/special_brush_pack__happy_halloween__by_d4rkawaii_de6do8r-pre.jpg" alt="brushes"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
-                    <a href="https://insider.in/art-contest-online-apr11-2020-digital-online-event/event"><img src="images/placeholder/xqmhdi2oebfbwef6hhgl.webp" alt="concurso"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
-                    <a href="index.html"><img src="images/placeholder/bombones.jpg" alt="bombones"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
-                    <a href="index.html"><img src="images/placeholder/Rock.jpg" alt="roca"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
-                    <a href="index.html"><img src="images/placeholder/book.jpg" alt="libro"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
-                    <a href="index.html"><img src="images/placeholder/cookie.jpg" alt="galleta"></a><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae delectus tempora odio dolores a nisi!</p>
+                    <a href="https://www.deviantart.com/d4rkawaii/art/Special-Brush-Pack-Happy-Halloween-857242107" target="_blank"><div class="img-cont2"><img src="images/imgIndex/packbrush.jpg" alt="Paquete de pinceles"></a><p>Paquete 10 de pinceles digitales (en .png y .abr).<strong> Autor=D4rkawaii.</strong></p></div>
+                    <a href="https://insider.in/art-contest-online-apr11-2020-digital-online-event/event" target="_blank"><div class="img-cont2"><img src="images/imgIndex/artctst.jpg" alt="Concurso de arte digital"></a><p>El Concurso de Arte Digital 2023 es una emocionante oportunidad para artistas digitales. Envía tus obras, exhibición virtual. Premios, comunidad creativa e intercambio de ideas. Explora la fusión de arte y tecnología. ¡Inspira con tu visión del futuro!</p></div>
+                    <a href="https://insider.in/all-digital-events-in-online" target="_blank"><div class="img-cont2"><img src="images/imgIndex/fiincontest.jpg" alt="Concurso de arte de naturaleza"></a><p>¡Bienvenidos al Concurso de Arte de la Naturaleza! Captura la belleza de la naturaleza a través de tu arte. Explora la diversidad de paisajes y vida silvestre con pintura, fotografía y escultura. Promovemos la conciencia ambiental.</p></div>
+                    <a href="https://insider.in/all-digital-events-in-online" target="_blank"><div class="img-cont2"><img src="images/imgIndex/pinceles2.jpg" alt="Paquete de pinceles 2"></a><p>Descubre este increíble paquete de pinceles para arte digital. Con estilos y efectos diversos, te brindará libertad creativa. Apto para ilustradores, diseñadores y amantes del arte digital.</p></div>
+                    <a href="https://insider.in/all-digital-events-in-online" target="_blank"><div class="img-cont2"><img src="images/imgIndex/climads.jpg" alt="Concurso de arte de temática clima"></a><p>¡Bienvenidos al Concurso de Arte sobre el Clima! Únete para generar conciencia y promover acciones contra el cambio climático. Expresa tu visión única a través de arte poderoso. ¡Únete a esta iniciativa global por un futuro sostenible y resiliente!</p></div>
+                    <a href="https://insider.in/all-digital-events-in-online" target="_blank"><div class="img-cont2"><img src="images/imgIndex/renactst.jpg" alt="Concurso de arte con temática renacimiento"></a><p>La Galería Boomer en Londres, Reino Unido, anuncia una convocatoria para artistas para una próxima exposición de arte del 7 al 12 de julio de 2023.</p></div>
                 </div>
-            </section> <!-- cont terc -->
-            <section class="galeriaIndex">
-                <article class="galeriaOpc">
+            </section>
+            <section class="galeria-Index">
+                <article class="galeria-Opc">
                     <select name="recienteselect" id="">
                         <option value="0">-Filtro-</option>
                         <option value="1">Filtro 1</option>
@@ -113,25 +104,41 @@
                     <input type="search" name="recientebusc" id="">
                     <a href="index.html">Aceptar</a>
                 </article>
-                <article class="galeriaimg">
-                        <a href="index.html"><img src="images/placeholder/ph1.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph2.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph3.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph4.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph5.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph6.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph7.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph8.jpg" alt="placeH"></a>
-                        <a href="index.html"><img src="images/placeholder/ph9.jpg" alt="placeH"></a>
+                <article class="galeria-img">
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img1.jpg" alt="Ilustración de Tundra"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img2.jpg" alt="Ilustración de Druida"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img3.jpg" alt="Ilustración de Guerra"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img4.jpg" alt="Ilustración de Ciudad"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img5.jpg" alt="Ilustración de Edificios"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img6.jpg" alt="Ilustración de Bosque"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img7.jpg" alt="Ilustración de diseñodeMonstruo"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img8.jpg" alt="Ilustración de diseñodeMounstruo2"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img9.jpg" alt="Ilustración de diseñodePersonaje"></a></div>
+                        <a href="pages/Contenido.html"><div class="img-cont"><img src="images/imgIndex/galeria/img10.jpg" alt="Ilustración de diseñodeMounstruo3"></a></div>
                 </article>
             </section>
         </main>
         <footer>
-            <div class="sticky">
-                <a href="#arriba"><img src="images/icons/130906.png" alt="placeH"></a>
+            <div class="conTacto">
+                <p>Contacto :</p>
+                <p>ArtHeart@gmailFALSO.com</p>
             </div>
-            <p>Copyright©</p>
-        </footer>   <!-- copyright, bibliografía, contacto --> <!-- Script js de bootstrap<script src=""></script> -->
+            <div class="footer-Pags">
+                <p>Links útiles :</p>
+                <a href="pages/Registro.html">Registro</a>
+                <a href="pages/Contenido.html">Contenido</a>
+                <a href="pages/ContenidoI.html">ContenidoI</a>
+                <a href="pages/FAQs.html">FAQs</a>
+            </div>
+            <div class="arriba-div">
+                <div class="volver-Arriba">
+                    <a href="#arriba"><img src="images/icons/arriba.png" alt="Volver arriba"></a>
+                </div>
+            </div>
+            <div class="copy">
+                <p>Copyright © 2023 ArtHeart.com - Derechos reservados</p>
+            </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>

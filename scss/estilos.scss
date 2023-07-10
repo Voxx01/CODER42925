@@ -1,18 +1,9 @@
 @import "variables";
-@mixin registro2 {
-    justify-content: space-between;
-    @include estilobasico1;
-    width: 80%;
-    max-width: 520px;
-    margin-top: 20px;
-    margin-left: 50px;
-    .Botom {
-        color: $color-terciario;
-        background-color: $color-primario;
-        border: $color-comp solid;
-        width: 100%;
-        height: 90px;
-    }
+@mixin margen-contenido {
+    margin: 5px 10px;
+}
+@mixin margen-index {
+    margin: 10px 5px;
 }
 @mixin flex-around {
     display: flex;
@@ -26,40 +17,66 @@
     position:sticky;
     top: 0%;
 }
-@mixin estilobasico1 {
-    background-color: $color-secundario;
-    border: $color-terciario solid;
+@mixin estilo-basico {
+    background-color: $color-principal-comp;
+    border: $color-textos solid;
+}
+@mixin registro-estilo {
+    justify-content: space-between;
+    @include estilo-basico;
+    width: 80%;
+    max-width: 520px;
+    margin-top: 20px;
+    margin-left: 50px;
+    .Botom {
+        color: $color-textos;
+        background-color: $color-principal;
+        border: $amarillo solid;
+        width: 100%;
+        height: 90px;
+        &:hover {
+            opacity: 0.85;
+        }
+    }
 }
 body {
+    /* Propiedades GRID */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 130px 1fr 80px;
+    grid-template-rows: 130px 1fr 0.1;
     grid-template-areas:
     "titulo"
     "medio"
     "pie";
+    /* Estilos */
     background: rgb(2,0,36);
     background: linear-gradient(360deg, rgba(2,0,36,1) 50%, rgba(9,9,121,1) 70%, rgba(0,212,255,1) 100%);
-    font-family: 'Montserrat', sans-serif;
     a {
-        color: #000000;
+        color: $color-textos;
         text-decoration: none;
+        font-weight: bolder;
+        img {
+        opacity: 0.85;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
     nav {
         grid-area: titulo;
         @include flex-around;
         align-items: center;
-        color: $color-terciario;
-        background-color: $color-primario;
-        border: $color-terciario outset 5px;
+        color: $color-textos;
+        background-color: $color-principal;
+        border: $color-textos outset 5px;
         margin: 5px;
         padding: 5px;
-        .navDesktop {
+        .nav-desktop {
             @include flex-around;
             align-items: center;
             width: 100%;
             h1 {
-                @include estilobasico1;
+                @include estilo-basico;
                 padding: 10px;
                 border-radius: 20px;
             }
@@ -74,12 +91,12 @@ body {
                 align-items: center;
             }
             a {
-                border: $color-terciario inset;
+                border: $color-textos inset;
                 padding: 10px;
                 border-radius: 10px;
-                color: $color-terciario;
+                color: $color-textos;
                 &:hover {
-                    background-color: $color-secundario;
+                    background-color: $color-principal-comp;
                 }
             }
         }
@@ -87,7 +104,8 @@ body {
             display: none;
         }
     }
-    .gridHijo1 {
+    .grid-hijo1 {
+        /* Propiedades GRID */
         display: grid;
         grid-area: medio;
         grid-template-columns: 3fr 1fr;
@@ -95,24 +113,22 @@ body {
         grid-template-areas:
         "slide news"
         "galeriaIndex news";
-        img {
-        opacity: 85%;
-            &:hover {
-                opacity: 100%;
-            }
+        /* Estilos */
+        a {
+            color: $negro;
+            align-items: center;
+            padding-top: 0.5%; 
         }
         .slide {
-            @include estilobasico1;
-            background-color: black;
+            @include estilo-basico;
+            background-color: $negro;
             padding-bottom: 50px;
-            margin: 25px 5px;
             grid-area: slide;
             display: flex;
             flex-flow: column wrap;
             justify-content: start;
             align-content: space-around;
-            margin-top: 10px;
-            margin-left: 10px;
+            @include margen-index;
             img {
                 object-fit: cover;
                 width: 100%;
@@ -121,12 +137,12 @@ body {
                 height: 650px;
             }
             .carousel-control-prev {
-                opacity: 60%;
-                background-color: $color-primario;
+                opacity: 0.6;
+                background-color: $color-principal;
                 width: 50px;
                 height: 100%;
                 &:hover {
-                    opacity: 100%;
+                    opacity: 1;
                 }
             }
             .carousel-control-next {
@@ -138,88 +154,109 @@ body {
             @include flex-column;
             justify-content: space-between;
             align-content: space-around;
-            @include estilobasico1;
-            margin: 10px;
-            margin-top: 25px;
+            @include estilo-basico;
+            @include margen-index;
             overflow-y: scroll;
-            overflow-x: hidden;
-            img {
-                width: 100%;
-                object-fit: cover;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .img-cont2 {
+                background-color: $negro;
+                img {
+                    width: 100%; 
+                    border: $color-principal solid;
+                }
             }
             p {
-                background-color:$color-comp;
+                background-color:$amarillo;
                 width: 100%;
+                padding: 0 5px;
+                font-weight: bolder;
             }
             h4 {
                 height: 60px;
                 text-align: center;
-                font-size: 60px;
-                background-color: $color-terciario;
+                font-size: 50px;
+                color: $color-textos;
+                background-color: $color-principal;
             }
         }
-        .galeriaIndex {
+        .galeria-Index {
             grid-area: galeriaIndex;
-            @include estilobasico1;
+            @include estilo-basico;
             overflow-y: scroll;
-            margin: 0 5px;
-            .galeriaOpc {
-                background-color: $color-primario;
+            @include margen-index;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .galeria-Opc {
+                background-color: $color-principal;
                 display: flex;
-                padding: 2px;
+                flex-flow: row nowrap;
                 justify-content: space-around;
-                select, a {
-                    border: $color-primario solid;
-                    background-color: $color-comp;
+                align-items: center;
+                height: 150px;
+                padding: 2px;
+                select, a, input {
+                    border: $color-principal-comp2 outset;
+                    background-color: $color-textos;
                     text-align: center;
+                    height: 40px;
                 }
             }
-            .galeriaimg {
+            .galeria-img {
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: space-around;
-                img {
-                    width: 300px;
-                    height: 200px;
-                    margin: 5px 3px;
-                    object-fit: cover;
+                justify-content: start;
+                .img-cont {
+                    border: $color-principal solid;
+                    background-color: $negro;
+                    margin: 5px;
+                    margin-left: 20px;
+                    width: 450px;
+                    height: 220px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }  
         }
     }
-    .gridHijo2 {
+    .grid-hijo2 {
+        /* Propiedades GRID */
         display: grid;
         grid-area: medio;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas: "registro regisCon iniciarS";
-        label, a {
-            color: $color-terciario;
+        /* Estilos */
+        a {
+            color: $color-textos;
         }
         h2 {
             text-align: center;
-            background-color: $color-primario;
-            color: $color-terciario;
+            background-color: $color-principal;
+            color: $color-textos;
         }
         .registro {
             grid-area: registro;
-            @include flex-column;
-            @include registro2;
-            justify-content: start;
-            max-height: 600px;
-            .registroDatos{
+            @include flex-column; 
+            max-height: 650px;
+            @include registro-estilo; 
+            label, a {
                 @include flex-column;
-                justify-content: space-evenly;
-                padding: 0 10px;
-                input, select  {
-                    margin: 10px 0;
-                }
+                justify-content: space-between;
+                padding: 10px;
+                color: $color-textos;
             }
         }
         .logos {
             grid-area: regisCon;
             @include flex-column;
             justify-content: space-between;
-            @include estilobasico1;
+            @include estilo-basico;
             width: 80%;
             max-width: 350px;
             height: 125px;
@@ -227,30 +264,24 @@ body {
             margin-top: 20px;
             margin-left: 50px;
             img {
-                background-color: $color-terciario;
                 border-radius: 50%;
-                border: $color-primario solid;
+                border: $color-principal solid;
                 object-fit: cover;
                 width: 40px;
                 height: 40px;
             }
-            .logosIcons {
+            .logos-Icons {
                 @include flex-around;
             }
         }
         .Is {
             grid-area: iniciarS;
-            @include flex-column; 
             max-height: 480px;
-            @include registro2; 
-            label, a {
-                @include flex-column;
-                justify-content: space-between;
-                padding: 10px;
-            }
+            @extend .registro;
         }
     }
-    .gridHijo3 {
+    .grid-hijo3 {
+        /* Propiedades GRID */
         display: grid;
         grid-area: medio;
         grid-template-columns: 2fr 2fr 1fr;
@@ -258,77 +289,95 @@ body {
         grid-template-areas:
         "filtroPrincipal filtroPrincipal buscadorContenido"
         "galeriaContenido galeriaContenido checkContenido";
-        .filtroPrincipal {
+        /* Estilos */
+        .filtro-Principal {
             grid-area: filtroPrincipal;
             @include flex-around;
             align-items: center;
-            background-color: $color-secundario;
-            margin: 5px 10px;
+            background-color: $color-principal;
+            border: $amarillo solid;
+            @include margen-contenido;
+            select, a {
+                border: $color-textos solid;
+                padding: 5px;
+                color: $color-textos;
+                background-color: $color-principal-comp;
+            }
         }
-        .galeriaContenido {
+        .galeria-Contenido {
             display: flex;
             grid-area: galeriaContenido;
             flex-flow: row wrap;
-            justify-content: space-around;
+            justify-content: start;
             align-items: center;
-            background-color: $color-comp;
+            background-color: $amarillo;
+            border: $color-principal solid;
             max-height: 600px;
             overflow-y: scroll;
-            padding: 20px;
+            padding: 15px;
+            @include margen-contenido;
+            &::-webkit-scrollbar {
+                display: none;
+            }
             img {
                 object-fit: cover;
-                width: 330px;
+                width: 320px;
                 height: 250px;
-                padding: 5px;
+                margin: 5px;
+                border: $color-principal solid;
             }
         }
-        .buscadorContenido {
+        .buscador-Contenido {
             grid-area: buscadorContenido;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: $color-comp;
+            background-color: $amarillo;
+            border: $color-principal solid;
             padding: 5px;
             margin: 5px 15px;
             margin-left: 5px;
             input {
-                border: $color-primario solid;
+                border: $color-principal solid;
             }
-            .busMobContenido {
+            .bus-MobContenido {
                 display: none;
             }
         }
-        .checkContenido {
+        .check-Contenido {
             grid-area: checkContenido;
             @include flex-column;
             justify-content: space-around;
-            background-color: $color-comp;
+            background-color: $color-principal;
+            border: $amarillo solid;
             overflow: auto;
             margin: 5px 15px;
             margin-left: 5px;
-            .checkF1 {
-                background-color: $color-primario;
+            .check-F1 {
+                background-color: $color-principal;
                 @include flex-column;
                 justify-content: space-around;
-                border: $color-terciario outset;
+                border: $color-textos outset;
                 label {
-                    @include estilobasico1;
-                    color: $color-terciario;
-                    padding-left: 20px;
-                    padding: 5px;
+                    @include estilo-basico;
+                    color: $color-textos;
+                    text-align: center;
+                    font-size: large;
+                    padding-bottom: 5px;
                     margin: 5px;
                     height: 30px;
                 }
             }
-            .checkF2 {
-                @extend .checkF1;
+            .check-F2 {
+                @extend .check-F1;
             }
-            .checkF3 {
-                @extend .checkF1;
+            .check-F3 {
+                @extend .check-F1;
             }
         }
     }
-    .gridHijo31 {
+    .grid-hijo31 {
+        /* Propiedades GRID */
         display: grid;
         grid-area: medio;
         grid-template-columns: 1fr 1fr;
@@ -336,27 +385,34 @@ body {
         grid-template-areas:
         "preview datos"
         "mas mas";
+        /* Estilos */
         .preview {
             grid-area: preview;
-            background-color: $color-primario;
-            border: $color-terciario solid;
+            background-color: $color-principal;
+            border: $color-textos solid;
             display: flex;
             flex-flow: row wrap;
             margin: 10px 10px;
-            .previewimg {
-                @include flex-around;
+            width: 100;
+            .preview-img {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
                 img {
-                    width: 350px;
-                    margin: 10px;
+                    width: 48%;
+                    object-fit: cover;
+                    margin: 5px;
                 }
             }
-            .previewlink {
+            .preview-link {
                 grid-area: previewlink;
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: start;
+                justify-content: space-around;
+                align-content: center;
                 a {
-                    background-color: $color-terciario;
+                    background-color: $color-textos;
+                    color: $negro;
                     font-size:x-large;
                     margin: 5px;
                     padding-top: 5px;
@@ -369,18 +425,21 @@ body {
         .datos {
             grid-area: datos;
             @include flex-column;
-            color: $color-terciario;
-            @include estilobasico1;
+            color: $color-textos;
+            @include estilo-basico;
             margin: 10px 10px;
             overflow-y: scroll;
-            .datosTitulo {
-                color: $color-terciario;
-                background-color: $color-primario;
+            .datos-Titulo {
+                color: $color-textos;
+                background-color: $color-principal;
                 text-decoration: underline;
                 @include sticky;
                 padding: 0 20px;
+                h4 {
+                    font-size: medium;
+                }
             }
-            .datosicons {
+            .datos-icons {
                 @include flex-around;
                 padding: 10px 20px;
                 width: 400px;
@@ -398,7 +457,7 @@ body {
         .mas {
             grid-area: mas;
             display: flex;
-            @include estilobasico1;
+            @include estilo-basico;
             overflow-y: hidden;
             margin: 0 10px;
             img {
@@ -407,47 +466,107 @@ body {
             }
         }
     }
-    .gridHijo4 {
+    .grid-hijo4 {
+        /* Propiedades GRID */
         display: grid;
         grid-area: medio;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "Normas PreguntasA"
-        "Normas PreguntasB";
-        .Normas {
-            grid-area: Normas;
-            background-color: #ffc400;
-            max-height: 500px;
-        }
+        "PreguntasA"
+        "PreguntasB";
+        /* Estilos */
         .preguntasA {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
             grid-area: PreguntasA;
-            background-color: #c02d00;
             padding: 5px;
+            .accordion {
+                border: $color-principal solid;
+                .accordion-item {
+                    background-color: $celeste;
+                    .accordion-button, .accordion-button-collapsed {
+                        background-color: $celeste-comp;
+                        font-size: large;
+                    }
+                }
+            }
         }
         .preguntasB {
             grid-area: PreguntasB;
-            background-color: #16c000;
-            padding: 5px;
+            @extend .preguntasA;
+            .accordion {
+                .accordion-item {
+                    background-color: $amarillo;
+                    .accordion-button, .accordion-button-collapsed {
+                        background-color: $amarillo-comp;
+                    }
+                }
+            }
         }
     }
     footer {
+        /* Propiedades GRID */
         grid-area: pie;
-        @include flex-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 0.1fr 0.1fr;
+        grid-template-areas: 
+        "footerPags conTacto arribadiv"
+        "copy copy arribadiv";
+        /* Estilos */
         align-items: center;
-        color: $color-terciario;
-        background-color: #3c096c;
-        border: $color-terciario outset 5px;
-        margin: 5px;
+        color: $color-textos;
+        background-color: $color-principal;
+        border: $color-textos outset 5px;
         padding: 5px;
-        .sticky {
-            @include sticky;
-            background-color:$color-terciario;
-            border-radius: 45%;
+        margin: 5px;
+        .conTacto {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            grid-area: conTacto;
+            border: 2px $color-textos solid;  
+            height: 100%;
             padding: 5px;
-            img{
-                width: 25px;
+        }
+        .footer-Pags {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            grid-area: footerPags;
+            display: flex;
+            flex-flow: column nowrap;
+            border: $color-textos solid;  
+            height: 100%;
+            padding: 5px;
+        }
+        .arriba-div {
+            grid-area: arribadiv;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            .volver-Arriba {
+                background-color:$color-textos;
+                border-radius: 45%;
+                padding: 5px;
+                width: 35px;
+                img{
+                    width: 25px;
+                }
             }
+        }
+        .copy {
+            grid-area: copy;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border: 2px $color-textos solid;  
+            padding: 5px;
         }
     }
 }
@@ -456,7 +575,7 @@ body {
         nav {
             @include flex-around;
             height: 120px;
-            .navDesktop {
+            .nav-desktop {
                 width: 200px;
                 ul {
                     display: none;
@@ -466,14 +585,16 @@ body {
                 display: flex;
             }
         }
-        .gridHijo1 {
+        .grid-hijo1 {
+            /* Propiedades GRID */
             grid-template-columns: 3fr 2fr;
             grid-template-rows: 500px 500px;
             grid-template-areas:
             "slide slide"
             "galeriaIndex news";
+            /* Estilos */
             img {
-                opacity: 100%;
+                opacity: 1;
             }
             .slide {
                 height: 100%;
@@ -486,15 +607,23 @@ body {
                     height: 480px;
                 } 
             }
-            .galeriaIndex {
+            .galeria-Index {
                 margin: 20px 10px;
-                .galeriaOpc {
+                .galeria-Opc {
                     @include sticky;
                     display: flex;
                     flex-flow: column wrap;
                     justify-content: space-around;
                     align-content: center;
                     height: 200px;
+                }
+                .galeria-img {
+                    .img-cont {
+                        margin: 15px;
+                        img {
+                            width: 400px;
+                        }
+                    }
                 }
             }
             .news {
@@ -510,71 +639,92 @@ body {
                 }
             }
         }
-        .gridHijo2 {
+        /* Propiedades GRID */
+        .grid-hijo2 {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas:
-            "iniciarS registro" 
-            "regisCon registro";
+            "registro regisCon" 
+            "registro iniciarS";
+            /* Estilos */
+            label {
+                font-size: medium;
+            }
         }
-        .gridHijo3 {
+        .grid-hijo3 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 0.3fr 0.3fr 1fr;
             grid-template-areas:
             "filtroPrincipal buscadorContenido"
             "checkContenido checkContenido"
             "galeriaContenido galeriaContenido";
-            .filtroPrincipal {
-                margin: 4px 0;
-                margin-left: 7px;
+            /* Estilos */
+            .filtro-Principal {
+                display: flex;
+                flex-flow: column nowrap;
             }
-            .galeriaContenido {
+            .galeria-Contenido {
                 display: flex;
                 flex-flow: row wrap;
-                justify-self: center;
-                margin: 4px 80px;
-                width: 95%;
-            }
-            .buscadorContenido {
-                @include flex-around;
-                margin: 4px 0;
-                margin-right: 7px;
-                .busMobContenido {
-                    @include flex-around;
+                img {
+                    width: 345px;
                 }
             }
-            .checkContenido {
+            .buscador-Contenido {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                .bus-MobContenido {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-around;
+                    height: 100%;
+                    select {
+                        border: $color-textos solid;
+                        padding: 5px;
+                        color: $color-textos;
+                        background-color: $color-principal-comp;
+                    }
+                }
+            }
+            .check-Contenido {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
                 align-items: center;
-                .checkF1 {
+                margin-left: 10px;
+                .check-F1 {
                     width: 30%;
                 }
             }
         }
-        .gridHijo31 {
+        .grid-hijo31 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr;
             grid-template-rows: 400px 400px 200px; 
             grid-template-areas:
             "preview" 
             "datos"
             "mas";
+            /* Estilos */
+            .datos {
+                .datos-Titulo {
+                    h4 {
+                        font-size: medium;
+                    }
+                }
+            }
         }
-        .gridHijo4 {
+        .grid-hijo4 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 550px 550px; 
+            grid-template-rows: 0.2fr 0.2fr; 
             grid-template-areas:
-            "Normas"
             "preguntasA" 
             "preguntasB";
+            /* Estilos */
             overflow-x: hidden;
-            .Normas {
-                grid-area: Normas;
-                width: 400px;
-                margin: 10px;
-                max-height: 1000px;
-            }
             .preguntasA {
                 margin: 10px;
             }
@@ -586,107 +736,82 @@ body {
 }
 @media screen and (max-width: 425px) {
     body {
-        .gridHijo1 {
+        /* Propiedades GRID */
+        .grid-hijo1 {
             grid-template-columns: 1fr;
             grid-template-rows: 325px 400px 300px;
             grid-template-areas:
             "slide"
             "galeriaIndex"
             "news";
+            /* Estilos */
             .slide {
                 .carousel-inner img {
                     height: 310px;
                 } 
             }
-            .galeriaimg {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-around;
-                align-items: center;
-                margin: 0;
-                img {
-                    margin: 10px;
-                    object-fit: cover;
+            .galeria-Index {
+                .galeria-img {
+                    .img-cont {
+                        margin-left: 25px;
+                        width: 350px;
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
             .news img {
                 object-fit: cover;
             }
         }
-        .gridHijo2 {
+        .grid-hijo2 {
+            /* Propiedades GRID */
             grid-template-columns:1fr;
-            grid-template-rows: 650px 150px 550px;
+            grid-template-rows: 650px 150px 500px;
             grid-template-areas:
             "registro"
             "regisCon"
             "iniciarS";
         }
-        .gridHijo3 {
+        .grid-hijo3 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr;
-            grid-template-rows: 0.2fr 1fr 0.15fr 0.25fr;
+            grid-template-rows: 0.1fr 1fr 0.1fr;
             grid-template-areas:
             "buscadorContenido"
             "galeriaContenido"
-            "filtroPrincipal"
-            "checkContenido";
-            .filtroPrincipal {
-                margin-right: 5px;
+            "filtroPrincipal";
+            .filtro-Principal {
+                flex-flow: row wrap;
             }
-            .buscadorContenido {
-                margin-left: 5px;
+            .buscador-Contenido {
+                flex-flow: row wrap;
+            }
+            .check-Contenido {
+                display: none;
             }
         }
-        .gridHijo31 {
+        .grid-hijo31 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr;
             grid-template-rows: 400px 400PX 200px; 
             grid-template-areas:
             "preview" 
             "datos"
             "mas";
-            .preview {
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 200px 100px;
-                grid-template-areas: 
-                "previewimg"
-                "previewlink";
-                .previewimg {
-                    grid-area: previewimg;
-                    @include flex-around;
-                    img {
-                        object-fit: cover;
-                        width: 170px;
-                    }
-                }
-                .previewlink {
-                    grid-area: previewlink;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-around;
-                    a {
-                        width: 100px;
-                    }
-                }
-            }
-            .datos {
-                width: 400px;
-                margin-left: 10px;
-            }
-            .mas {
-                width: 400px;
-                margin-left: 10px;
-            }
         }
-        .gridHijo4 {
+        .grid-hijo4 {
+            /* Propiedades GRID */
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr; 
             grid-template-areas:
             "Normas"
             "preguntasA" 
             "preguntasB";
-        }
-        .Normas {
-            margin: 10px;
+            .Normas {
+                margin: 10px;
+            }
         }
     }
 }
